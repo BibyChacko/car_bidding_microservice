@@ -1,0 +1,28 @@
+{
+  "name": "common_modules",
+  "version": "1.0.0",
+  "description": "Common modules for car bidding project",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "keywords": [
+    "common",
+    "modules"
+  ],
+  "author": "Biby Chacko",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.10.3",
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.1.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.22",
+    "winston": "^3.8.2"
+  }
+}

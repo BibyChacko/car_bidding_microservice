@@ -1,0 +1,28 @@
+{
+  "name": "verification_services",
+  "version": "1.0.0",
+  "description": "Verification service for user, car, dealer etc...",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm start",
+    "start": "nodemon server.js"
+  },
+  "keywords": [
+    "car",
+    "bidding",
+    "verification",
+    "document",
+    "verification"
+  ],
+  "author": "BibyChacko",
+  "license": "ISC",
+  "dependencies": {
+    "common_modules": "file:../common_modules",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.1.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1"
+  }
+}
