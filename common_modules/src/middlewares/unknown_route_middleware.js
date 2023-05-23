@@ -1,6 +1,8 @@
+const AppError = require("../models/app_error");
+
 const notFoundHandler = (req, res, next) => {
-    res.status(404).json({ status: false, error: "Not found" });
-  };
+    return next(new AppError(404,"URL doesn't exists"));
+};
   
   module.exports = notFoundHandler;
   

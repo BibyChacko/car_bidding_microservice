@@ -81,7 +81,12 @@ userSchema.methods.checkPasswords = async function(candidatePassword,userPasswor
     return await bcrypt.compare(candidatePassword,userPassword);
 }
 
+userSchema.methods.updateUserStatus =  function(userVerificationStatus){
+    this.isUserVerified = userVerificationStatus;
+}
 
+userSchema.methods.verifcyOfficial = function(){
+    this.isUserVerified = true; // TODO: Add layers of security here
+}
 var UserModel = mongoose.model("User",userSchema);
-
 module.exports = UserModel;

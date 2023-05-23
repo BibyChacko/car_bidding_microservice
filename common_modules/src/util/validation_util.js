@@ -16,7 +16,6 @@ function validatePassword(){
 
 function validationHandler(req,res,next){
     const errors = validationResult(req);
-            console.log(errors);
             if(!errors.isEmpty()){
                 return res.status(400).json({status:false,error:errors.errors[0].msg});
             }

@@ -1,0 +1,7 @@
+{"level":"error","message":"{\"url\":\"/auth-services/login\",\"method\":\"POST\",\"dateTime\":\"1,684,752,345,676\",\"statusCode\":401,\"errorMessage\":\"Invalid email or password\"}"}
+{"level":"error","message":"{\"url\":\"/auth-services/login\",\"method\":\"POST\",\"dateTime\":1684760158315,\"statusCode\":500,\"errorMessage\":\"secretOrPrivateKey must have a value\"}"}
+{"level":"error","message":"{\"url\":\"/auth-services/login\",\"method\":\"POST\",\"dateTime\":1684760192495,\"statusCode\":500,\"errorMessage\":\"secretOrPrivateKey must have a value\"}"}
+{"level":"error","message":"{\"url\":\"/auth-services/login\",\"method\":\"POST\",\"dateTime\":1684760217386,\"statusCode\":500,\"errorMessage\":\"secretOrPrivateKey must have a value\"}"}
+{"level":"error","message":"{\"url\":\"/auth-services/login\",\"method\":\"POST\",\"dateTime\":1684760302084,\"statusCode\":500,\"errorMessage\":\"secretOrPrivateKey must have a value\"}"}
+{"level":"error","message":"{\"url\":\"/auth-services/login\",\"method\":\"POST\",\"dateTime\":1684760354233,\"statusCode\":500,\"errorMessage\":\"secretOrPrivateKey must have a value\"}"}
+{"level":"error","message":"{\"url\":\"/auth-services/login\",\"method\":\"POST\",\"dateTime\":1684827166121,\"statusCode\":401,\"errorMessage\":\"Invalid email or password\"}"}

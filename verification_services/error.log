@@ -1,0 +1,4 @@
+{"level":"error","message":"{\"url\":\"/verification-services/user/docs/upload\",\"method\":\"PATCH\",\"dateTime\":1684828139897,\"statusCode\":500,\"errorMessage\":\"Class constructor AppError cannot be invoked without 'new'\"}"}
+{"level":"error","message":"{\"url\":\"/verification-services/user/docs/upload\",\"method\":\"PATCH\",\"dateTime\":1684828191834,\"statusCode\":500,\"errorMessage\":\"Class constructor AppError cannot be invoked without 'new'\"}"}
+{"level":"error","message":"{\"url\":\"/verification-services/user/docs/upload\",\"method\":\"PATCH\",\"dateTime\":1684828196483,\"statusCode\":500,\"errorMessage\":\"Class constructor AppError cannot be invoked without 'new'\"}"}
+{"level":"error","message":"{\"url\":\"/verification-services/user/docs/upload\",\"method\":\"PATCH\",\"dateTime\":1684828346640,\"statusCode\":401,\"errorMessage\":\"No token found,Please login for token\"}"}
