@@ -2,19 +2,17 @@ const express = require("express");
 const errorMiddleware = require("common_modules/src/middlewares/error_middleware");
 const essentialMiddleware = require("common_modules/src/middlewares/essential_middleware");
 const unknownRouteMiddleware =  require("common_modules/src/middlewares/unknown_route_middleware");
-const brokerListeners = require("./broker_listener");
-
-const authRouter = require("./routers/auth_routers");
+const biddingRouter = require("./routers/bidding_router");
+const brokerListener = require("./broker_listener");
 const app = express();
 
 essentialMiddleware(app);
-brokerListeners();
-app.use("/auth-services",authRouter);
+brokerListener();
 
-app.get("/auth-services/health",(req,res)=>{
-    res.send("Auth server is healthy");
+app.get("/bid-services/health",(req,res) => {
+    return res.send("Car server is healthy");
 });
-
+app.use("/bid-services",biddingRouter);
 
 app.use(unknownRouteMiddleware);
 app.use(errorMiddleware);

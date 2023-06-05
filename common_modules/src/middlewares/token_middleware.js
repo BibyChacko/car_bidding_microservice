@@ -7,8 +7,7 @@ const verifyToken = async (token) => {
     const decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET_KEY);
     return decoded;
   } catch (error) {
-    error.statusCode = 401;
-    next(error);
+    throw(error);
   }
 };
 
@@ -24,8 +23,8 @@ const validateToken = async (req,res,next) =>{
       req.headers.userId = decoded.uid;
       req.headers.userType = decoded.type;
       next();
-    }catch(ex){
-      next(ex);
+    }catch(error){
+      return next(new AppError(401,error.message,error.stacktrace));
     }
    
 }

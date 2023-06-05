@@ -3,7 +3,6 @@ const UserVerificationModel = require("../models/user_verification_model");
 const rabbitMQChannel = require("common_modules/src/util/message_broker_util");
 const AppError = require("common_modules/src/models/app_error");
 
-
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, "public/files/");
@@ -37,9 +36,9 @@ exports.initiateVerificationRecords = async () => {
   });
 };
 
-exports.uploadVerificationDocuments = async (req, res,next) => {
+exports.uploadVerificationDocuments = async (req, res, next) => {
   if (!req.files) {
-    return next(new AppError(400, "No files were uploaded" ));
+    return next(new AppError(400, "No files were uploaded"));
   }
 
   const aadhar = req.files.aadhar;
@@ -48,7 +47,12 @@ exports.uploadVerificationDocuments = async (req, res,next) => {
   const userId = req.headers.userId;
 
   if (!aadhar || !pan || !bankStatement) {
-    return next(new AppError(400, "All files (Aadhar, Pan, and Bank Statement) are required"));
+    return next(
+      new AppError(
+        400,
+        "All files (Aadhar, Pan, and Bank Statement) are required"
+      )
+    );
   }
 
   try {
@@ -65,13 +69,13 @@ exports.uploadVerificationDocuments = async (req, res,next) => {
       .status(200)
       .json({ status: true, msg: "Documents uploaded successfully" });
   } catch (ex) {
-    return next(new AppError(500,ex.message,ex.stacktrace));
+    return next(new AppError(500, ex.message, ex.stacktrace));
   }
 };
 
-// Update by the admin for verifying or rejecting teh documents uploaded 
+// Update by the admin for verifying or rejecting teh documents uploaded
 
-exports.updateVerificationDocs = async (req, res,next) => {
+exports.updateVerificationDocs = async (req, res, next) => {
   const aadharComment = req.body.aadharComment;
   const panComment = req.body.panComment;
   const bankStatementComment = req.body.bankStatementComment;
@@ -94,21 +98,24 @@ exports.updateVerificationDocs = async (req, res,next) => {
     bankStatementStatus
   );
   await verificationModel.save();
-  res.status(200).json({status:true,msg:"Documents verified succeffully"});
+  res.status(200).json({ status: true, msg: "Documents verified succeffully" });
   const verificationResult = verificationModel.isAllDocsApproved();
-  if(verificationResult){
-      sendVerificationSuccessAck(verificationModel.userId);
+  if (verificationResult) {
+    sendVerificationSuccessAck(verificationModel.userId);
   }
   return;
 };
 
-async function sendVerificationSuccessAck(userId){
+async function sendVerificationSuccessAck(userId) {
   const queueName = "update_verification";
   const channel = await rabbitMQChannel(queueName);
-  channel.sendToQueue(queueName,Buffer.from(JSON.stringify({userId:userId,status:true})));
+  channel.sendToQueue(
+    queueName,
+    Buffer.from(JSON.stringify({ userId: userId, status: true }))
+  );
 }
 
-exports.getPendingVerificationDocs = async (req, res,next) => {
+exports.getPendingVerificationDocs = async (req, res, next) => {
   try {
     var verificationPendings = await UserVerificationModel.find({
       verificationOpen: false,
@@ -119,6 +126,6 @@ exports.getPendingVerificationDocs = async (req, res,next) => {
       msg: "Pending verifications fetched successfully",
     });
   } catch (ex) {
-   return next(new AppError(500,ex.message,ex.stacktrace));
+    return next(new AppError(500, ex.message, ex.stacktrace));
   }
 };

@@ -1,0 +1,47 @@
+{"level":"error","message":"{\"url\":\"/car-services/health\",\"method\":\"GET\",\"dateTime\":1685007971338,\"statusCode\":401,\"errorMessage\":\"No token found,Please login for token\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/car\",\"method\":\"POST\",\"dateTime\":1685009814796,\"statusCode\":500,\"errorMessage\":\"next is not defined\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/car\",\"method\":\"POST\",\"dateTime\":1685010072981,\"statusCode\":500,\"errorMessage\":\"next is not defined\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/car\",\"method\":\"POST\",\"dateTime\":1685010092594,\"statusCode\":500,\"errorMessage\":\"next is not defined\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/car\",\"method\":\"POST\",\"dateTime\":1685011756721,\"statusCode\":500,\"errorMessage\":\"next is not defined\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/car\",\"method\":\"POST\",\"dateTime\":1685011941237,\"statusCode\":500,\"errorMessage\":\"next is not defined\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/car\",\"method\":\"POST\",\"dateTime\":1685011952196,\"statusCode\":500,\"errorMessage\":\"next is not defined\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/car\",\"method\":\"POST\",\"dateTime\":1685012022750,\"statusCode\":500,\"errorMessage\":\"next is not defined\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/car\",\"method\":\"POST\",\"dateTime\":1685012077219,\"statusCode\":500,\"errorMessage\":\"next is not defined\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/car\",\"method\":\"POST\",\"dateTime\":1685012088343,\"statusCode\":500,\"errorMessage\":\"next is not defined\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/car\",\"method\":\"POST\",\"dateTime\":1685012377151,\"statusCode\":500,\"errorMessage\":\"next is not defined\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/car\",\"method\":\"POST\",\"dateTime\":1685012386705,\"statusCode\":500,\"errorMessage\":\"next is not defined\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/car\",\"method\":\"POST\",\"dateTime\":1685012389960,\"statusCode\":500,\"errorMessage\":\"next is not defined\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/car\",\"method\":\"POST\",\"dateTime\":1685012626266,\"statusCode\":500,\"errorMessage\":\"next is not defined\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/car\",\"method\":\"POST\",\"dateTime\":1685012667720,\"statusCode\":500,\"errorMessage\":\"next is not defined\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/car\",\"method\":\"POST\",\"dateTime\":1685012669452,\"statusCode\":500,\"errorMessage\":\"next is not defined\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/car\",\"method\":\"POST\",\"dateTime\":1685012671480,\"statusCode\":500,\"errorMessage\":\"next is not defined\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/car\",\"method\":\"POST\",\"dateTime\":1685012701720,\"statusCode\":500,\"errorMessage\":\"next is not defined\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/car\",\"method\":\"POST\",\"dateTime\":1685012769497,\"statusCode\":500,\"errorMessage\":\"next is not defined\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/car\",\"method\":\"POST\",\"dateTime\":1685012871501,\"statusCode\":500,\"errorMessage\":\"next is not defined\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/car\",\"method\":\"POST\",\"dateTime\":1685012873487,\"statusCode\":500,\"errorMessage\":\"next is not defined\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/car\",\"method\":\"POST\",\"dateTime\":1685012943515,\"statusCode\":500,\"errorMessage\":\"next is not defined\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/car\",\"method\":\"POST\",\"dateTime\":1685012944847,\"statusCode\":500,\"errorMessage\":\"next is not defined\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/car\",\"method\":\"POST\",\"dateTime\":1685013006225,\"statusCode\":500,\"errorMessage\":\"next is not defined\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/car\",\"method\":\"POST\",\"dateTime\":1685013007688,\"statusCode\":500,\"errorMessage\":\"next is not defined\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/car\",\"method\":\"POST\",\"dateTime\":1685013010401,\"statusCode\":500,\"errorMessage\":\"next is not defined\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/health\",\"method\":\"GET\",\"dateTime\":1685013021754,\"statusCode\":401,\"errorMessage\":\"No token found,Please login for token\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/car\",\"method\":\"POST\",\"dateTime\":1685013132912,\"statusCode\":500,\"errorMessage\":\"next is not defined\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/car\",\"method\":\"GET\",\"dateTime\":1685013221558,\"statusCode\":500,\"errorMessage\":\"next is not defined\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/car\",\"method\":\"GET\",\"dateTime\":1685013224173,\"statusCode\":500,\"errorMessage\":\"next is not defined\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/car\",\"method\":\"GET\",\"dateTime\":1685013225401,\"statusCode\":500,\"errorMessage\":\"next is not defined\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/cars\",\"method\":\"POST\",\"dateTime\":1685013271792,\"statusCode\":500,\"errorMessage\":\"next is not defined\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/cars\",\"method\":\"POST\",\"dateTime\":1685013274583,\"statusCode\":500,\"errorMessage\":\"next is not defined\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/cars\",\"method\":\"POST\",\"dateTime\":1685013288021,\"statusCode\":500,\"errorMessage\":\"next is not defined\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/cars\",\"method\":\"POST\",\"dateTime\":1685013289291,\"statusCode\":500,\"errorMessage\":\"next is not defined\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/cars\",\"method\":\"POST\",\"dateTime\":1685013479944,\"statusCode\":500,\"errorMessage\":\"next is not defined\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/cars\",\"method\":\"POST\",\"dateTime\":1685013482471,\"statusCode\":500,\"errorMessage\":\"next is not defined\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/cars\",\"method\":\"POST\",\"dateTime\":1685013499524,\"statusCode\":401,\"errorMessage\":\"No token found,Please login for token\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/cars\",\"method\":\"POST\",\"dateTime\":1685013557255,\"statusCode\":401,\"errorMessage\":\"invalid signature\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/cars/646f44516a60bc8d45d6516c\",\"method\":\"GET\",\"dateTime\":1685013983884,\"statusCode\":404,\"errorMessage\":\"URL doesn't exists\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/cars/646f44516a60bc8d45d6516c\",\"method\":\"GET\",\"dateTime\":1685014121617,\"statusCode\":404,\"errorMessage\":\"URL doesn't exists\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/cars/646f44516a60bc8d45d6516c\",\"method\":\"GET\",\"dateTime\":1685014123812,\"statusCode\":404,\"errorMessage\":\"URL doesn't exists\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/cars\",\"method\":\"POST\",\"dateTime\":1685014938720,\"statusCode\":401,\"errorMessage\":\"No token found,Please login for token\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/cars\",\"method\":\"POST\",\"dateTime\":1685014938768,\"statusCode\":401,\"errorMessage\":\"No token found,Please login for token\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/cars\",\"method\":\"POST\",\"dateTime\":1685015177545,\"statusCode\":401,\"errorMessage\":\"No token found,Please login for token\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/cars\",\"method\":\"POST\",\"dateTime\":1685015177589,\"statusCode\":401,\"errorMessage\":\"No token found,Please login for token\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/cars/646f477b24175216debaea02/bid\",\"method\":\"PATCH\",\"dateTime\":1685938522564,\"statusCode\":500,\"errorMessage\":\"Car validation failed: biddingInfo.closingTime: Cast to Number failed for value \\\"2023-06-07T09:34:51.152\\\" (type string) at path \\\"biddingInfo.closingTime\\\"\"}"}

@@ -11,6 +11,8 @@ function initServer(service,app){
 const serverPorts = {
     "auth_service" : 7000,
     "verification_service" : 7001,
+    "car_services" : 7002,
+    "bidding_services": 7003,
 };
 
 module.exports = initServer;

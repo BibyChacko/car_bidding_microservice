@@ -14,7 +14,7 @@ app.get("/verification-services/health",(req,res)=>{
     res.send("Verification server is healthy");
 });
 
-app.use(errorMiddleware);
 app.use(unknownRouteMiddleware);
+app.use(errorMiddleware);
 
 module.exports = app;

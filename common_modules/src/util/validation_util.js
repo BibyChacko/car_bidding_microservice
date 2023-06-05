@@ -1,5 +1,5 @@
 
-const { body, validationResult } = require("express-validator");
+const { body, validationResult, param } = require("express-validator");
 
 
 function emailValidation(){
@@ -8,6 +8,10 @@ function emailValidation(){
 
 function isEmpty(key){
     return body(key).notEmpty().withMessage(`${key} is required`);
+}
+
+function containsInParams(key){
+    return param(key).notEmpty().withMessage(`${key} is required`);
 }
 
 function validatePassword(){
@@ -20,6 +24,22 @@ function validationHandler(req,res,next){
                 return res.status(400).json({status:false,error:errors.errors[0].msg});
             }
             next();
+}
+
+
+exports.isDataExistsInParams = (paramsData,any) =>{
+    var validators = [];
+    paramsData.forEach(element => {
+        validators.push(containsInParams(element));
+    });
+    if((any || false) && validators.length < paramsData.length){
+        next();
+        return;
+    }
+    return [
+        validators,
+        validationHandler
+    ];
 }
 
 exports.validateRequiredFields = (requiredFields,any) =>{
