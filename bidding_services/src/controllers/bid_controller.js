@@ -4,9 +4,12 @@ const crudFactory = require("common_modules/src/util/factory/crud_handler_factor
 const rabbitMQChannel = require("common_modules/src/util/message_broker_util");
 
 exports.placeABid = async (req, res, next) => {
-  const bidId = req.body.bidId;
-  const bidAmount = req.body.bidAmount;
   try {
+    const carId = req.body.carId;
+    const bidAmount = req.body.bidAmount;
+    const userId = req.headers.userId;
+    const bid = await BidModel.find({"carId":carId});
+    
   } catch (error) {
     return next(AppError(500, error.message, error.stacktrace));
   }
