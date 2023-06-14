@@ -1,0 +1,34 @@
+{
+  "name": "notification_services",
+  "version": "1.0.0",
+  "description": "Service to handle all notification and other alerts,email and sms handlers",
+  "main": "server.js",
+  "scripts": {
+    "start": "npm i && nodemon server.js"
+  },
+  "keywords": [
+    "Notifications",
+    "Car",
+    "Bidding",
+    "Firebase",
+    "Web",
+    "Sockets",
+    "Socket.io",
+    "Email",
+    "SMS"
+  ],
+  "author": "BibyChacko",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "chai-http": "^4.4.0",
+    "common_modules": "file:../common_modules",
+    "cors": "^2.8.5",
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "mocha": "^10.2.0",
+    "mongoose": "^7.2.4",
+    "morgan": "^1.10.0",
+    "socket.io": "^4.6.2"
+  }
+}

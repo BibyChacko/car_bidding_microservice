@@ -13,6 +13,7 @@ const serverPorts = {
     "verification_service" : 7001,
     "car_services" : 7002,
     "bidding_services": 7003,
+    "notification_services": 7004
 };
 
 module.exports = initServer;
