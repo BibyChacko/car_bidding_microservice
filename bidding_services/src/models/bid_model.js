@@ -33,6 +33,11 @@ const bidSchema = mongoose.Schema(
   }
 );
 
+bidSchema.methods.placeBid = async function(userId,amount) {
+  this.leaderId = userId;
+  this.bidAmount = amount;
+  // TODO: Lets also add the no: of bids and participants 
+}
 const bidModel = mongoose.model("Bid", bidSchema);
 
 module.exports = bidModel;

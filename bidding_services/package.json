@@ -27,6 +27,8 @@
     "express": "^4.18.2",
     "mocha": "^10.2.0",
     "mongoose": "^7.2.2",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "redis": "^4.6.7",
+    "redislock": "^1.3.0"
   }
 }
