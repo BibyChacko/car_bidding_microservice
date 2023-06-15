@@ -3,7 +3,7 @@ const dontenv = require("dotenv");
 function initServer(service,app){
     const port = serverPorts[service];
     dontenv.config({path:"./config.env"});  
-    app.listen(port,()=>{
+    return app.listen(port,()=>{
         console.log(`${service} running successfully on port ${port}`);
     });
 }
