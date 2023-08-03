@@ -1,6 +1,11 @@
 const AppError = require("common_modules/src/models/app_error");
 const { getIO } = require("../../socket");
 const rabbitMQChannel = require("common_modules/src/util/message_broker_util");
+const DeviceModel = require("../models/device_model");
+const {
+  sendMessageToDevice,
+  sendMessageToTopic,
+} = require("../helper/firebase_admin_helper");
 
 exports.joinARoom = async () => {
   const queueName = "join-room";
@@ -20,17 +25,22 @@ exports.emitEventToRoom = async () => {
   const queueName = "send-event-to-room";
   const channel = await rabbitMQChannel(queueName);
   channel.consume(queueName, async (message) => {
-    const io = getIO();
     const { roomName, eventName, data } = JSON.parse(
       message.content.toString()
     );
     console.log(
       `Recieved an event ${eventName} with data : ${data} for the room ${roomName}`
     );
-    io.to(roomName).emit(eventName, data);
+
+    sendEvent(roomName, eventName, data);
     channel.ack(message);
   });
 };
+
+function sendEvent(roomName, eventName, data) {
+  const io = getIO();
+  io.to(roomName).emit(eventName, data);
+}
 
 exports.disconnectClientFromRoom = async (req, res, next) => {
   try {
@@ -67,4 +77,38 @@ exports.disconnectRoom = async (req, res, next) => {
   }
 };
 
-function sendGeneralNotification(data) {}
+exports.handleOutBid = async () => {
+  const queueName = "bid_notification";
+  const channel = await rabbitMQChannel(queueName);
+  channel.consume(queueName, async (message) => {
+    const { formerLeaderId, currentLeaderId, bidAmount, bidId, carId } =
+      JSON.parse(message.content.toString());
+    sendNotificationToUserDeviceToken(
+      currentLeaderId,
+      "Congragulations",
+      `You leads the bid with amount of Rs.${bidAmount}`,
+      { bidId: bidId, carId: carId }
+    );
+    sendNotificationToUserDeviceToken(
+      formerLeaderId,
+      "Alert",
+      `Sorry, you are outbidden by Rs.${bidAmount}`,
+      { bidId: bidId, carId: carId }
+    );
+
+    sendMessageToTopic(
+      carId,
+      "Bid Alert",
+      `A new bid had been placed for Rs. ${bidAmount}`,
+      null,
+      { bidId: bidId, carId: carId }
+    );
+    channel.ack(message);
+  });
+};
+
+async function sendNotificationToUserDeviceToken(userId, title, message, data) {
+  const deviceModel = await DeviceModel.find({ userId: userId });
+  const deviceToken = deviceModel.deviceToken;
+  sendMessageToDevice(deviceToken, title, message, null, data);
+}

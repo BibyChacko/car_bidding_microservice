@@ -9,14 +9,21 @@ exports.initializeFirebaseApp = () => {
 
 exports.sendMessageToDevice = async (
   deviceToken,
-  sendData,
+  title,
+  body,
+  imageUrl,
+  miscData,
   messagingOptions
 ) => {
   try {
     // Result will be  a messageId when send successfully
     const result = await firebaseAdmin
       .messaging()
-      .send({ token: deviceToken, data: sendData });
+      .send({
+        token: deviceToken,
+        notification: { title: title, body: body, imageUrl: imageUrl },
+        data: miscData,
+      });
   } catch (error) {
     console.error(error);
   }
@@ -24,7 +31,10 @@ exports.sendMessageToDevice = async (
 
 exports.sendMessageToMultipleDevices = async (
   deviceTokenList,
-  sendData,
+  title,
+  body,
+  imageUrl,
+  miscData,
   messagingOptions
 ) => {
   try {
@@ -33,19 +43,34 @@ exports.sendMessageToMultipleDevices = async (
     // SendResponse --   success: boolean,  messageId?: string,   error?: FirebaseError
     const batchResults = await firebaseAdmin
       .messaging()
-      .sendEachForMulticast({ tokens: deviceTokenList, data: sendData });
+      .sendEachForMulticast({
+        tokens: deviceTokenList,
+        notification: { title: title, body: body, imageUrl: imageUrl },
+        data: miscData,
+      });
   } catch (error) {
     console.error(error);
     // TODO: Add a logger here for catching these error events
   }
 };
 
-exports.sendMessageToTopic = async (topic, sendData, messagingOptions) => {
+exports.sendMessageToTopic = async (
+  topic,
+  title,
+  body,
+  imageUrl,
+  miscData,
+  messagingOptions
+) => {
   try {
     // resposne is MessagingTopicResponse , which contain a messageId , can acess it as response.messageId
     const response = await firebaseAdmin
       .messaging()
-      .sendToTopic(topic, sendData);
+      .sendToTopic({
+        topic: topic,
+        notification: { title: title, body: body, imageUrl: imageUrl },
+        data: miscData,
+      });
   } catch (error) {
     console.error(error);
     // TODO: Add a logger here for catching these error events

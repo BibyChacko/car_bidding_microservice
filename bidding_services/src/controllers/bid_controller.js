@@ -14,6 +14,8 @@ exports.placeABid = async (req, res, next) => {
 
     const bidModel = await BidModel.findOne({ carId: carId }); // This is going to bring a lot of load on DB, Check for an optimized solution
 
+    const formerLeader = bidModel.leaderId;
+
     if (bidAmount <= bidModel.bidAmount) {
       return res
         .status(400)
@@ -60,16 +62,36 @@ exports.placeABid = async (req, res, next) => {
     bidModel.placeBid(userId, bidAmount);
     await bidModel.save();
     await redisClient.del(lockKey);
+    const eventData = {
+        "formerLeaderId" : formerLeader,
+        "currentLeaderId" : userId,
+        "bidAmount" : bidAmount,
+        "bidId" : bidModel._id,
+        "carId" : carId
+    };
+
+    initiateNotification(eventData);
+
     return res
       .status(200)
       .json({
         status: true,
         msg: "Bid placed successfully.Congragulations, you leads the bid now.",
       });
+
   } catch (error) {
     return next(new AppError(500, error.message, error.stacktrace));
   }
 };
+
+async function initiateNotification(eventData){
+  const queueName = "bid_notification";
+  const channel = await rabbitMQChannel(queueName);
+  channel.sendToQueue(
+    queueName,
+    Buffer.from(JSON.stringify(eventData))
+  );
+}
 
 // Helper function to retrieve multiple values from Redis
 function redisGetMultiple(keys) {
