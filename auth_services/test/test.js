@@ -7,10 +7,12 @@ const mongoose = require("mongoose");
 
 testHelper();
 chai.use(chai_http);
-mongoose.connect(process.env.DATABASE_LOCAL,).then(conn=>{
-  console.log("DB Connected");
-}).catch(e=>console.log(e));
-
+mongoose
+  .connect(process.env.DATABASE_LOCAL)
+  .then((conn) => {
+    console.log("DB Connected");
+  })
+  .catch((e) => console.log(e));
 
 describe("Auth Operations", () => {
   // Login test
@@ -28,7 +30,7 @@ describe("Auth Operations", () => {
     });
   });
 
-   describe("POST /login", () => {
+  describe("POST /login", () => {
     it("This should provide an error for wrong email and password", (done) => {
       chai
         .request(server)
@@ -57,11 +59,10 @@ describe("Auth Operations", () => {
         .end((err, res) => {
           res.should.have.status(200);
           res.body.status.should.be.eql(true);
-          (res.body).should.have.property("data");
-          (res.body).should.have.property("token");
+          res.body.should.have.property("data");
+          res.body.should.have.property("token");
           done();
         });
     });
   });
-
 });

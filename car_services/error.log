@@ -45,3 +45,27 @@
 {"level":"error","message":"{\"url\":\"/car-services/cars\",\"method\":\"POST\",\"dateTime\":1685015177545,\"statusCode\":401,\"errorMessage\":\"No token found,Please login for token\"}"}
 {"level":"error","message":"{\"url\":\"/car-services/cars\",\"method\":\"POST\",\"dateTime\":1685015177589,\"statusCode\":401,\"errorMessage\":\"No token found,Please login for token\"}"}
 {"level":"error","message":"{\"url\":\"/car-services/cars/646f477b24175216debaea02/bid\",\"method\":\"PATCH\",\"dateTime\":1685938522564,\"statusCode\":500,\"errorMessage\":\"Car validation failed: biddingInfo.closingTime: Cast to Number failed for value \\\"2023-06-07T09:34:51.152\\\" (type string) at path \\\"biddingInfo.closingTime\\\"\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/cars\",\"method\":\"POST\",\"dateTime\":1693834742181,\"statusCode\":401,\"errorMessage\":\"No token found,Please login for token\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/cars\",\"method\":\"POST\",\"dateTime\":1693834742213,\"statusCode\":401,\"errorMessage\":\"No token found,Please login for token\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/cars\",\"method\":\"POST\",\"dateTime\":1693835019940,\"statusCode\":401,\"errorMessage\":\"jwt expired\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/cars\",\"method\":\"POST\",\"dateTime\":1693835214908,\"statusCode\":401,\"errorMessage\":\"jwt expired\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/cars\",\"method\":\"POST\",\"dateTime\":1693835228816,\"statusCode\":500,\"errorMessage\":\"Car validation failed: biddingInfo.initialAmount: Amount is required, biddingInfo.closingTime: Closing time is required, biddingInfo.openingTime: Opening time is required\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/cars\",\"method\":\"POST\",\"dateTime\":1693835447392,\"statusCode\":401,\"errorMessage\":\"No token found,Please login for token\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/cars\",\"method\":\"POST\",\"dateTime\":1693835447518,\"statusCode\":401,\"errorMessage\":\"No token found,Please login for token\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/cars\",\"method\":\"POST\",\"dateTime\":1693836058386,\"statusCode\":401,\"errorMessage\":\"No token found,Please login for token\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/cars\",\"method\":\"POST\",\"dateTime\":1693836058413,\"statusCode\":401,\"errorMessage\":\"No token found,Please login for token\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/cars\",\"method\":\"POST\",\"dateTime\":1693836148872,\"statusCode\":401,\"errorMessage\":\"No token found,Please login for token\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/cars\",\"method\":\"POST\",\"dateTime\":1693836148903,\"statusCode\":401,\"errorMessage\":\"No token found,Please login for token\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/cars\",\"method\":\"POST\",\"dateTime\":1693836245434,\"statusCode\":401,\"errorMessage\":\"No token found,Please login for token\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/cars\",\"method\":\"POST\",\"dateTime\":1693836245497,\"statusCode\":401,\"errorMessage\":\"No token found,Please login for token\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/cars\",\"method\":\"POST\",\"dateTime\":1693842119521,\"statusCode\":401,\"errorMessage\":\"No token found,Please login for token\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/cars\",\"method\":\"POST\",\"dateTime\":1693842119568,\"statusCode\":401,\"errorMessage\":\"No token found,Please login for token\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/cars\",\"method\":\"POST\",\"dateTime\":1693842489289,\"statusCode\":401,\"errorMessage\":\"jwt malformed\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/cars\",\"method\":\"POST\",\"dateTime\":1693842565690,\"statusCode\":401,\"errorMessage\":\"jwt malformed\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/cars\",\"method\":\"POST\",\"dateTime\":1693842565794,\"statusCode\":500,\"errorMessage\":\"E11000 duplicate key error collection: CarBidding.cars index: carModel_1 dup key: { carModel: \\\"Civic\\\" }\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/cars\",\"method\":\"POST\",\"dateTime\":1693842608436,\"statusCode\":401,\"errorMessage\":\"jwt malformed\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/cars\",\"method\":\"POST\",\"dateTime\":1693842608542,\"statusCode\":500,\"errorMessage\":\"E11000 duplicate key error collection: CarBidding.cars index: carModel_1 dup key: { carModel: \\\"Civic\\\" }\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/cars\",\"method\":\"POST\",\"dateTime\":1693842641364,\"statusCode\":401,\"errorMessage\":\"jwt malformed\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/cars\",\"method\":\"POST\",\"dateTime\":1693844380827,\"statusCode\":401,\"errorMessage\":\"No token found,Please login for token\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/cars\",\"method\":\"POST\",\"dateTime\":1693844502590,\"statusCode\":401,\"errorMessage\":\"No token found,Please login for token\"}"}
+{"level":"error","message":"{\"url\":\"/car-services/cars\",\"method\":\"POST\",\"dateTime\":1693844523374,\"statusCode\":401,\"errorMessage\":\"No token found,Please login for token\"}"}

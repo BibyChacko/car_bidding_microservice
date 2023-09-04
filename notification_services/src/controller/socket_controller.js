@@ -103,6 +103,9 @@ exports.handleOutBid = async () => {
       null,
       { bidId: bidId, carId: carId }
     );
+
+    // Send the data to the room so that the widget for showing the amount updates
+    sendEvent(carId,"new-bid",JSON.parse(message.content.toString()));
     channel.ack(message);
   });
 };

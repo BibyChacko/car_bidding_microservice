@@ -5,3 +5,6 @@
 {"level":"error","message":"{\"url\":\"/auth-services/login\",\"method\":\"POST\",\"dateTime\":1684760302084,\"statusCode\":500,\"errorMessage\":\"secretOrPrivateKey must have a value\"}"}
 {"level":"error","message":"{\"url\":\"/auth-services/login\",\"method\":\"POST\",\"dateTime\":1684760354233,\"statusCode\":500,\"errorMessage\":\"secretOrPrivateKey must have a value\"}"}
 {"level":"error","message":"{\"url\":\"/auth-services/login\",\"method\":\"POST\",\"dateTime\":1684827166121,\"statusCode\":401,\"errorMessage\":\"Invalid email or password\"}"}
+{"level":"error","message":"{\"url\":\"/auth-services/login\",\"method\":\"POST\",\"dateTime\":1693834178929,\"statusCode\":401,\"errorMessage\":\"Invalid email or password\"}"}
+{"level":"error","message":"{\"url\":\"/auth-services/find_user\",\"method\":\"POST\",\"dateTime\":1693834640297,\"statusCode\":404,\"errorMessage\":\"User not found\"}"}
+{"level":"error","message":"{\"url\":\"/auth-services/find_user\",\"method\":\"POST\",\"dateTime\":1693834642010,\"statusCode\":404,\"errorMessage\":\"User not found\"}"}

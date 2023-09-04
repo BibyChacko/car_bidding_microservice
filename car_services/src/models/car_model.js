@@ -61,15 +61,12 @@ const carSchema = mongoose.Schema({
   biddingInfo: {
     openingTime: {
       type: Date,
-      required: [true, "Opening time is required"],
     },
     closingTime: {
       type: Date,
-      required: [true, "Closing time is required"],
     },
     initialAmount: {
       type: Number,
-      required: [true, "Amount is required"],
     },
   },
 });
