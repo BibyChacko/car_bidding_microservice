@@ -1,7 +1,7 @@
 const UserModel = require("../models/user_model");
 const jwt = require("jsonwebtoken");
-const rabbitMQChannel = require("common_modules/src/util/message_broker_util");
-const AppError = require("common_modules/src/models/app_error");
+const rabbitMQChannel = require("@bibybat/common_modules/src/util/message_broker_util");
+const AppError = require("@bibybat/common_modules/src/models/app_error");
 
 exports.signUpUser = async (req, res, next) => {
   const payload = req.body;

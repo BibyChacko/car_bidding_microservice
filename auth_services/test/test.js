@@ -2,7 +2,7 @@ let chai = require("chai");
 let chai_http = require("chai-http");
 let server = require("../src/app");
 var should = chai.should();
-let testHelper = require("common_modules/src/util/test_helper");
+let testHelper = require("@bibybat/common_modules/src/util/test_helper");
 const mongoose = require("mongoose");
 
 testHelper();

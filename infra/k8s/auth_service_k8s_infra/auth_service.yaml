@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ktz-auth-service
+  labels:
+    app: ktz-auth-service
+spec:
+   selector:
+     app: ktz-auth
+   ports:
+      - name: ktz-auth
+        protocol: TCP
+        port: 7000
+        targetPort: 7000

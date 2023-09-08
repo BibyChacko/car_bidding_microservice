@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ktz-auth
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ktz-auth
+  template:
+    metadata:
+      labels:
+        app: ktz-auth
+    spec:  
+      containers:
+        - name: ktz-auth
+          image: bibybat/ktz_auth_services
+          ports:
+            - containerPort: 7000

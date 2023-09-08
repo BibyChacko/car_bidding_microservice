@@ -1,5 +1,5 @@
 {
-  "name": "common_modules",
+  "name": "@bibybat/common_modules",
   "version": "1.0.0",
   "description": "Common modules for car bidding project",
   "main": "index.js",
