@@ -60,7 +60,7 @@ async function initUserVerification(userId) {
 exports.updateVerification = async () => {
   console.log("Verification updated");
   const queueName = "update_verification";
-  const channel = await rabbitMQChannel(queueName);
+  const channel = await rabbitMQChannel(queueName); // TODO: Move it to a singleton class
   channel.consume(queueName, async (message) => {
     try {
       const { userId, status } = JSON.parse(message.content.toString());

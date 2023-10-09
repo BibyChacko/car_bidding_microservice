@@ -1,0 +1,57 @@
+apiVersion: skaffold/v2alpha3
+kind: Config
+deploy:
+  kubectl:
+    manifests:
+      - ./infra/k8s/auth_service_k8s_infra/*
+      - ./infra/k8s/bidding_service_k8s_infra/*
+      - ./infra/k8s/car_service_k8s_infra/*
+      - ./infra/k8s/car_service_k8s_infra/*
+      - ./infra/k8s/load_balancer/*
+      - ./infra/k8s/notification_service_k8s_infra/*
+      - ./infra/k8s/rabbit_infra/*
+      - ./infra/k8s/verification_service_k8s_infra/*
+build:
+  local:
+    push: off
+  artifacts:
+    - image: bibybat/ktz_auth_services
+      context: ktz_auth_services
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "**/*.js"
+            dest: .  
+    - image: bibybat/ktz_bidding_services
+      context: ktz_bidding_services
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "**/*.js"
+            dest: .          
+    - image: bibybat/ktz_car_services
+      context: ktz_car_services
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "**/*.js"
+            dest: .     
+    - image: bibybat/ktz_notification_services
+      context: ktz_notification_services
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "**/*.js"
+            dest: . 
+    - image: bibybat/ktz_verification_services
+      context: ktz_verification_services
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "**/*.js"
+            dest: .                               

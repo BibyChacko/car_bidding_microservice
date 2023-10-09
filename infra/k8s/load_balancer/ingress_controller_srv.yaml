@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-controller
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: localktzdev.com
+      http:
+       paths:
+        - path: "auth-services"
+          backend:
+            service:
+              name: " ktz-auth-service"
+              port: 
+                number: 7000
+      
