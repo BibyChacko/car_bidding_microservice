@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ktz-bidding-db
+  labels:
+    app: ktz-bidding-db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ktz-bidding-db
+  template:
+    metadata:
+      name: ktz-bidding-db
+      labels:
+        app: ktz-bidding-db
+    spec:
+      containers:
+        - name: ktz-bidding-mongo-db
+          image: mongo
+          ports:
+            - containerPort: 27017
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: ktz-bidding-db-srv
+  labels:
+    app: ktz-bidding-db-srv
+spec:
+  type: ClusterIP
+  selector: 
+    app: ktz-bidding-db
+  ports:
+    - name: ktz-bidding-db-port
+      protocol: TCP
+      port: 27017
+      targetPort: 27017   

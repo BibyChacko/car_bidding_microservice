@@ -32,7 +32,7 @@ metadata:
     app: ktz-auth-db-srv
 
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: ktz-auth-db
   ports:

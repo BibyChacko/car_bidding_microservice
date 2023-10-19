@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ktz-bidding-app
+  labels:
+    app: ktz-bidding-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels: 
+      app: ktz-bidding-app
+  template:
+    metadata:
+      name: ktz-bidding-app
+      labels:
+        app: ktz-bidding-app
+    spec:
+      containers:
+        - name: ktz-bidding-app
+          image: bibybat/ktz_bidding_services
+          port:
+            - containerPort: 7003
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: ktz-bidding-app-srv
+  labels:
+    app: ktz-bidding-app-srv
+spec:
+    type: ClusterIP
+    selector:
+      app: ktz-bidding-app
+    ports:
+      - name: ktz-bidding-app-port
+        protocol: TCP
+        port: 7003
+        targetPort: 7003  
+  

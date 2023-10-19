@@ -16,7 +16,7 @@
     "bcrypt": "^5.1.0",
     "chai": "^4.3.7",
     "chai-http": "^4.3.0",
-    "@bibybat/common_modules": "1.0.1",
+    "@bibybat/common_modules": "1.0.2",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",

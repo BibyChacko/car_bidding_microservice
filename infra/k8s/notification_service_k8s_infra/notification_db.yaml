@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ktz-carservice-db
+  name: ktz-notification-db
   labels:
-    app: ktz-carservice-db
+    app: ktz-notification-db
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ktz-carservice-db
+      app: ktz-notification-db
   template:
     metadata:
-      name: ktz-carservice-db
+      name: ktz-notification-db
       labels:
-        app: ktz-carservice-db
+        app: ktz-notification-db
     spec:
       containers:
-        - name: ktz-carservice-db
+        - name: ktz-notification-db
           image: mongo
           port:
             - containerPort: 27017
@@ -26,16 +26,15 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: ktz-carservice-db-srv
+  name: ktz-notification-db-srv
   labels:
-    app: ktz-carservice-db-srv
+    app: ktz-notification-db-srv
 spec:
-  type: ClusterIP
+  kind: ClusterIP
   selector:
-    app:  ktz-carservice-db
+    app:  ktz-notification-db
   ports:
-    - name:  ktz-carservice-db-port
+    - name: ktz-notification-db-port
       protocol: TCP
       port: 27017
-      targetPort: 27017
-          
+      targetPort: 27017  

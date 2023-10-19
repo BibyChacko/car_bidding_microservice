@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ktz-notifification-app
+  labels:
+    app: ktz-notifification-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ktz-notifification-app
+  template:
+    metadata:
+      name: ktz-notifification-app
+      labels:
+        app: ktz-notifification-app
+    spec:
+      containers:
+        - name:   ktz-notifification-app
+          image: bibybat/ktz_notification_services
+          port:
+            - containerPort: 7004
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: ktz-notifification-app-srv
+  labels:
+    app: ktz-notifification-app-srv
+spec:
+  type: ClusterIP
+  selector:
+    labels:
+     app: ktz-notifification-app 
+  ports:
+    - name: ktz-notifification-app-srv-port
+      protocol: TCP
+      port: 7004
+      targetPort: 70041
+      

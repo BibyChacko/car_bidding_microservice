@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ktz-verification-db
+  labels:
+    app: ktz-verification-db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ktz-verification-db
+  template:
+    metadata:
+      name: ktz-verification-db
+      labels:
+        app: ktz-verification-db
+    spec:
+      containers:
+        - name: ktz-verification-db
+          image: mongo
+          port: 
+            - containerPort: 27017
+
+
+---
+
+apiVersion: v1 
+kind: Service
+metadata:
+  name: ktz-verification-db-srv
+  labels:
+    app: ktz-verification-db-srv
+spec:
+  type: ClusterIP
+  selector:
+    app: ktz-verification-db
+  ports:
+    - name: ktz-verification-db-port
+      protocol: TCP
+      port: 27017
+      targetPort: 27017

@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ktz-carservice-app
+  labels:
+    app: ktz-carservice-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ktz-carservice-app
+  template:
+    metadata:
+      name: ktz-carservice-app 
+      labels:
+        app: ktz-carservice-app 
+    spec:
+      containers:
+        - name: ktz-carservice-app 
+          image: bibybat/ktz_car_services
+          port:
+            - containerPort: 7002
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: ktz-carservice-app-srv
+  labels:
+    app: ktz-carservice-app-srv
+spec:
+  type: ClusterIP
+  selector:
+      app:  ktz-carservice-app 
+  ports:
+    - name: ktz-carservice-app-srv-port
+      protocol: TCP
+      port: 7002
+      containerPort: 7002 
