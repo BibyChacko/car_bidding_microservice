@@ -18,7 +18,7 @@ spec:
       containers:
         - name: ktz-verification-app
           image: bibybat/ktz_verification_services
-          port:
+          ports:
             - containerPort: 7001
 
 ---
@@ -32,7 +32,6 @@ metadata:
 spec: 
   type: ClusterIP
   selector:
-    labels:
       app: ktz-verification-app
   ports:
     - name: ktz-verification-app-srv-port

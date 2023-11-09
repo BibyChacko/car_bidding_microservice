@@ -1,7 +1,7 @@
 const express = require("express");
-const errorMiddleware = require("common_modules/src/middlewares/error_middleware");
-const essentialMiddleware = require("common_modules/src/middlewares/essential_middleware");
-const unknownRouteMiddleware =  require("common_modules/src/middlewares/unknown_route_middleware");
+const errorMiddleware = require("@bibybat/common_modules/src/middlewares/error_middleware");
+const essentialMiddleware = require("@bibybat/common_modules/src/middlewares/essential_middleware");
+const unknownRouteMiddleware =  require("@bibybat/common_modules/src/middlewares/unknown_route_middleware");
 const carRouter = require("./routers/car_router");
 const app = express();
 

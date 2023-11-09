@@ -15,12 +15,18 @@ spec:
       labels:
         app: ktz-verification-db
     spec:
+      volumes:
+        - name: ktz-verification-db-storage
+          persistentVolumeClaim:
+            claimName:  verification-volume-claim
       containers:
         - name: ktz-verification-db
           image: mongo
-          port: 
+          ports: 
             - containerPort: 27017
-
+          volumeMounts:
+            - name: ktz-verification-db-storage
+              mountPath: "/data/db"
 
 ---
 

@@ -1,6 +1,6 @@
-const AppError = require("common_modules/src/models/app_error");
+const AppError = require("@bibybat/common_modules/src/models/app_error");
 const DeviceModel = require("../models/device_model");
-const crudFactory = require("common_modules/src/util/factory/crud_handler_factory");
+const crudFactory = require("@bibybat/common_modules/src/util/factory/crud_handler_factory");
 
 exports.addNewDevice = crudFactory.createOne(DeviceModel);
 

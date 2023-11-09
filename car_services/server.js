@@ -1,5 +1,5 @@
 const app = require("./src/app");
-const server = require("common_modules/src/server/server_main");
+const server = require("@bibybat/common_modules/src/server/server_main");
 const mongoose = require("mongoose");
 
 server("car_services",app);

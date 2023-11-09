@@ -1,7 +1,7 @@
-const AppError = require("common_modules/src/models/app_error");
+const AppError = require("@bibybat/common_modules/src/models/app_error");
 const CarModel = require("../models/car_model");
-const crudFactory = require("common_modules/src/util/factory/crud_handler_factory");
-const rabbitMQChannel = require("common_modules/src/util/message_broker_util");
+const crudFactory = require("@bibybat/common_modules/src/util/factory/crud_handler_factory");
+const rabbitMQChannel = require("@bibybat/common_modules/src/util/message_broker_util");
 
 exports.addNewCar = crudFactory.createOne(CarModel);
 exports.getAllCar = crudFactory.readMany(CarModel);

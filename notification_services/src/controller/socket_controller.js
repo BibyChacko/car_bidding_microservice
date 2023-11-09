@@ -1,6 +1,6 @@
-const AppError = require("common_modules/src/models/app_error");
+const AppError = require("@bibybat/common_modules/src/models/app_error");
 const { getIO } = require("../../socket");
-const rabbitMQChannel = require("common_modules/src/util/message_broker_util");
+const rabbitMQChannel = require("@bibybat/common_modules/src/util/message_broker_util");
 const DeviceModel = require("../models/device_model");
 const {
   sendMessageToDevice,

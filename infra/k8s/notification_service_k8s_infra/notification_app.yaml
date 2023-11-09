@@ -16,9 +16,9 @@ spec:
         app: ktz-notifification-app
     spec:
       containers:
-        - name:   ktz-notifification-app
+        - name:  ktz-notifification-app
           image: bibybat/ktz_notification_services
-          port:
+          ports:
             - containerPort: 7004
 
 ---
@@ -32,11 +32,10 @@ metadata:
 spec:
   type: ClusterIP
   selector:
-    labels:
      app: ktz-notifification-app 
   ports:
     - name: ktz-notifification-app-srv-port
       protocol: TCP
       port: 7004
-      targetPort: 70041
+      targetPort: 7004
       

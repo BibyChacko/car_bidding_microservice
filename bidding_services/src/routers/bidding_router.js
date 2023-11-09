@@ -1,5 +1,5 @@
 const express = require("express");
-const tokenVerificationMiddleware = require("common_modules/src/middlewares/token_middleware");
+const tokenVerificationMiddleware = require("@bibybat/common_modules/src/middlewares/token_middleware");
 const bidController = require("../controllers/bid_controller");
 
 const bidRouter = express.Router();

@@ -1,7 +1,7 @@
 const multer = require("multer");
 const UserVerificationModel = require("../models/user_verification_model");
-const rabbitMQChannel = require("common_modules/src/util/message_broker_util");
-const AppError = require("common_modules/src/models/app_error");
+const rabbitMQChannel = require("@bibybat/common_modules/src/util/message_broker_util");
+const AppError = require("@bibybat/common_modules/src/models/app_error");
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {

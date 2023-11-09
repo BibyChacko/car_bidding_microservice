@@ -21,13 +21,14 @@
   "dependencies": {
     "chai": "^4.3.7",
     "chai-http": "^4.3.0",
-    "common_modules": "file:../common_modules",
+    "@bibybat/common_modules": "1.0.2",
     "cors": "^2.8.5",
     "dotenv": "^16.1.1",
     "express": "^4.18.2",
     "mocha": "^10.2.0",
     "mongoose": "^7.2.2",
     "morgan": "^1.10.0",
+    "nodemon": "^3.0.1",
     "redis": "^4.6.7",
     "redislock": "^1.3.0"
   }

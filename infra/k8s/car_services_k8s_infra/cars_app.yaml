@@ -18,7 +18,7 @@ spec:
       containers:
         - name: ktz-carservice-app 
           image: bibybat/ktz_car_services
-          port:
+          ports:
             - containerPort: 7002
 
 ---
@@ -37,4 +37,4 @@ spec:
     - name: ktz-carservice-app-srv-port
       protocol: TCP
       port: 7002
-      containerPort: 7002 
+      targetPort: 7002 

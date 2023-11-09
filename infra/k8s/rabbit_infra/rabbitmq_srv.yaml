@@ -28,7 +28,7 @@ kind: Service
 metadata:
   name: rabbit-mq-service
   labels:
-    app: ktz-auth-service
+    app: rabbit-mq-service
 spec:
   type: ClusterIP
   selector:

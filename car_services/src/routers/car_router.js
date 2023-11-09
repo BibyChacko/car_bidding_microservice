@@ -1,6 +1,6 @@
 const express = require("express");
-const tokenVerificationMiddleware = require("common_modules/src/middlewares/token_middleware");
-const validationHelper = require("common_modules/src/util/validation_util");
+const tokenVerificationMiddleware = require("@bibybat/common_modules/src/middlewares/token_middleware");
+const validationHelper = require("@bibybat/common_modules/src/util/validation_util");
 const carController = require("../controllers/car_controller");
 
 const carRouter = express.Router();

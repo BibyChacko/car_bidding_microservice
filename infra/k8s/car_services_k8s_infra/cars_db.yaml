@@ -15,11 +15,18 @@ spec:
       labels:
         app: ktz-carservice-db
     spec:
+      volumes:
+        - name: ktz-carservice-db-storage
+          persistentVolumeClaim:
+            claimName: vehicle-volume-claim
       containers:
         - name: ktz-carservice-db
           image: mongo
-          port:
+          ports:
             - containerPort: 27017
+          volumeMounts:
+            - name: ktz-carservice-db-storage
+              mountPath: "/data/db"
 
 ---
 

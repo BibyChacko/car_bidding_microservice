@@ -18,7 +18,7 @@ spec:
       containers:
         - name: ktz-bidding-app
           image: bibybat/ktz_bidding_services
-          port:
+          ports:
             - containerPort: 7003
 
 ---
