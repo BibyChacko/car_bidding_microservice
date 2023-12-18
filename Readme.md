@@ -6,7 +6,7 @@ Command to run is "skaffold dev"
 
 ## Common dependencies in all services
 
-npm i ../common_modules dotenv express mongoose chai chai-http mocha --save
+npm i bibybat/common_modules dotenv express mongoose chai chai-http mocha --save
 
 For intsalling ingress-nginx , use the following command
 
